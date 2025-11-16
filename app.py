@@ -5,6 +5,9 @@ import subprocess
 import os
 import sys
 
+# 设置 pandas 选项以避免 FutureWarning
+pd.set_option('future.no_silent_downcasting', True)
+
 # 页面配置
 st.set_page_config(
     page_title="AI Models Dashboard",
@@ -38,9 +41,9 @@ def load_data():
         other_cols = [col for col in df.columns if col not in cols]
         df = df[cols + other_cols]
 
-        # 填充NaN值
-        df['supports_reasoning'] = df['supports_reasoning'].fillna(False)
-        df['supports_vision'] = df['supports_vision'].fillna(False)
+        # 填充NaN值 - 修复 FutureWarning
+        df['supports_reasoning'] = df['supports_reasoning'].fillna(False).infer_objects(copy=False)
+        df['supports_vision'] = df['supports_vision'].fillna(False).infer_objects(copy=False)
 
         return df
     except Exception as e:
@@ -109,12 +112,12 @@ if 'uploaded_file_path' not in st.session_state:
 # 导入配置功能
 col1, col2 = st.sidebar.columns([1, 1])
 with col1:
-    if st.button("导入配置", use_container_width=True):
+    if st.button("导入配置", width="stretch"):
         st.session_state.show_uploader = True
         st.rerun()
 
 with col2:
-    if st.button("刷新数据", use_container_width=True):
+    if st.button("刷新数据", width="stretch"):
         st.cache_data.clear()
         st.rerun()
 
@@ -153,7 +156,7 @@ if st.session_state.show_uploader or st.session_state.uploaded_file_path:
 
         col1, col2 = st.sidebar.columns([1, 1])
         with col1:
-            if st.sidebar.button("⚙️ 开始处理", key="process_button", use_container_width=True):
+            if st.sidebar.button("⚙️ 开始处理", key="process_button", width="stretch"):
                 try:
                     # 调用 process_yaml.py 处理文件
                     with st.spinner("处理中..."):
@@ -185,7 +188,7 @@ if st.session_state.show_uploader or st.session_state.uploaded_file_path:
                     st.sidebar.error(f"❌ 发生错误: {str(e)}")
 
         with col2:
-            if st.sidebar.button("🗑️ 清除", key="clear_button", use_container_width=True):
+            if st.sidebar.button("🗑️ 清除", key="clear_button", width="stretch"):
                 # 删除临时文件
                 if os.path.exists(st.session_state.uploaded_file_path):
                     os.remove(st.session_state.uploaded_file_path)
@@ -257,6 +260,6 @@ display_df.index.name = '#'
 # 显示表格 - 占满主内容区域
 st.dataframe(
     display_df,
-    use_container_width=True,
+    width='stretch',
     height=600
 )
