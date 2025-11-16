@@ -1,0 +1,879 @@
+model_list:
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 8K
+    max_tokens: 128K
+    output_cost_1M_token: 0.42
+  model_name: D/deepseek-chat-official
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 64K
+    max_tokens: 128K
+    output_cost_1M_token: 0.42
+    supports_reasoning: true
+  model_name: D/deepseek-reasoner-official
+- model_info:
+    input_cost_1M_token: 0.3
+    max_output_tokens: 131K
+    max_tokens: 204K
+    output_cost_1M_token: 1.2
+    supports_reasoning: true
+  model_name: minimax-m2-official
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 262K
+    max_tokens: 262K
+    output_cost_1M_token: 2.26
+    supports_reasoning: true
+  model_name: M/kimi-k2-thinking-official
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 262K
+    max_tokens: 262K
+    output_cost_1M_token: 2.26
+  model_name: M/kimi-k2-0905-official
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 1.41
+    supports_vision: true
+  model_name: M/kimi-latest-official
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 8K
+    max_tokens: 8K
+    output_cost_1M_token: 1.41
+    supports_vision: true
+  model_name: M/moonshot-v1-8k-v-official
+- model_info:
+    input_cost_1M_token: 0.71
+    max_output_tokens: 32K
+    max_tokens: 32K
+    output_cost_1M_token: 2.82
+    supports_vision: true
+  model_name: M/moonshot-v1-32k-v-official
+- model_info:
+    input_cost_1M_token: 1.41
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 4.23
+    supports_vision: true
+  model_name: M/moonshot-v1-128k-v-official
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: GLM/glm-4.6-official
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 96K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: GLM/glm-4.5-official
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 96K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: GLM/glm-4.5-air-official
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 65K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: GLM/glm-4.5v-official
+- model_info:
+    input_cost_1M_token: 0.2
+    max_output_tokens: 10K
+    max_tokens: 256K
+    output_cost_1M_token: 1.5
+    supports_reasoning: true
+  model_name: XAI/grok-code-fast-1-official
+- model_info:
+    input_cost_1M_token: 0.2
+    max_output_tokens: 30K
+    max_tokens: 2000K
+    output_cost_1M_token: 0.5
+    supports_reasoning: true
+    supports_vision: true
+  model_name: XAI/grok-4-fast-reasoning-official
+- model_info:
+    input_cost_1M_token: 0.2
+    max_output_tokens: 30K
+    max_tokens: 2000K
+    output_cost_1M_token: 0.5
+    supports_vision: true
+  model_name: XAI/grok-4-fast-non-reasoning-official
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: XAI/grok-4-0709-official
+- model_info:
+    input_cost_1M_token: 0.3
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0.5
+    supports_reasoning: true
+  model_name: XAI/grok-3-mini-official
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 15.0
+  model_name: XAI/grok-3-official
+- model_info:
+    input_cost_1M_token: 0.49
+    max_output_tokens: 204K
+    max_tokens: 204K
+    output_cost_1M_token: 1.97
+    supports_reasoning: true
+  model_name: S/zai-org/GLM-4.6
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 163K
+    max_tokens: 163K
+    output_cost_1M_token: 2.26
+    supports_reasoning: true
+  model_name: S/deepseek-ai/DeepSeek-R1
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 163K
+    max_tokens: 163K
+    output_cost_1M_token: 0.42
+    supports_reasoning: true
+  model_name: S/deepseek-ai/DeepSeek-V3.2-Exp
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 163K
+    max_tokens: 163K
+    output_cost_1M_token: 1.69
+    supports_reasoning: true
+  model_name: S/deepseek-ai/DeepSeek-V3.1-Terminus
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 262K
+    max_tokens: 262K
+    output_cost_1M_token: 2.26
+    supports_reasoning: true
+  model_name: S/moonshotai/Kimi-K2-Thinking
+- model_info:
+    input_cost_1M_token: 0.3
+    max_output_tokens: 192K
+    max_tokens: 192K
+    output_cost_1M_token: 1.18
+    supports_reasoning: true
+  model_name: S/MiniMaxAI/MiniMax-M2
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 64K
+    max_tokens: 64K
+    output_cost_1M_token: 0.85
+    supports_reasoning: true
+    supports_vision: true
+  model_name: S/zai-org/GLM-4.5V
+- model_info:
+    input_cost_1M_token: 0.49
+    max_output_tokens: 96K
+    max_tokens: 128K
+    output_cost_1M_token: 1.97
+    supports_reasoning: true
+  model_name: S/zai-org/GLM-4.5
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 96K
+    max_tokens: 128K
+    output_cost_1M_token: 0.85
+    supports_reasoning: true
+  model_name: S/zai-org/GLM-4.5-Air
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 102K
+    max_tokens: 256K
+    output_cost_1M_token: 0.56
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-VL-32B-Instruct
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 102K
+    max_tokens: 256K
+    output_cost_1M_token: 1.41
+    supports_reasoning: true
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-VL-32B-Thinking
+- model_info:
+    input_cost_1M_token: 0.35
+    max_output_tokens: 102K
+    max_tokens: 256K
+    output_cost_1M_token: 1.41
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-VL-235B-A22B-Instruct
+- model_info:
+    input_cost_1M_token: 0.35
+    max_output_tokens: 102K
+    max_tokens: 256K
+    output_cost_1M_token: 1.41
+    supports_reasoning: true
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-VL-235B-A22B-Thinking
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 64K
+    max_tokens: 64K
+    output_cost_1M_token: 0.39
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-Omni-30B-A3B-Instruct
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 64K
+    max_tokens: 64K
+    output_cost_1M_token: 0.39
+    supports_reasoning: true
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-Omni-30B-A3B-Thinking
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 64K
+    max_tokens: 64K
+    output_cost_1M_token: 0.39
+    supports_vision: true
+  model_name: S/Qwen/Qwen3-Omni-30B-A3B-Captioner
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 131K
+    max_tokens: 256K
+    output_cost_1M_token: 0.39
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-30B-A3B-Thinking-2507
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 131K
+    max_tokens: 256K
+    output_cost_1M_token: 0.39
+  model_name: S/Qwen/Qwen3-30B-A3B-Instruct-2507
+- model_info:
+    input_cost_1M_token: 0.35
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 1.41
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-235B-A22B-Thinking-2507
+- model_info:
+    input_cost_1M_token: 0.35
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 1.41
+  model_name: S/Qwen/Qwen3-235B-A22B-Instruct-2507
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.56
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-32B
+- model_info:
+    input_cost_1M_token: 0.07
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.28
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-14B
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-8B
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.56
+  model_name: S/Qwen/Qwen3-Next-80B-A3B-Instruct
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.56
+    supports_reasoning: true
+  model_name: S/Qwen/Qwen3-Next-80B-A3B-Thinking
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.39
+  model_name: S/Qwen/Qwen3-Coder-30B-A3B-Instruct
+- model_info:
+    input_cost_1M_token: 1.13
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 2.26
+  model_name: S/Qwen/Qwen3-Coder-480B-A35B-Instruct
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 64K
+    max_tokens: 64K
+    output_cost_1M_token: 1.41
+    supports_reasoning: true
+  model_name: S/stepfun-ai/step3
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.56
+    supports_reasoning: true
+  model_name: S/tencent/Hunyuan-A13B-Instruct
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 2.26
+  model_name: S/inclusionAI/Ring-1T-Instruct
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 2.26
+    supports_reasoning: true
+  model_name: S/inclusionAI/Ling-1T-reasoning
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.56
+  model_name: S/Kwaipilot/KAT-Dev-32B
+- model_info:
+    input_cost_1M_token: 1.0
+    max_output_tokens: 64K
+    max_tokens: 200K
+    output_cost_1M_token: 5.0
+    supports_vision: true
+  model_name: R/anthropic/claude-haiku-4.5
+- model_info:
+    input_cost_1M_token: 1.0
+    max_output_tokens: 64K
+    max_tokens: 200K
+    output_cost_1M_token: 5.0
+    supports_vision: true
+  model_name: R/anthropic/claude-haiku-4.5:online
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-sonnet-4.5
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-sonnet-4.5:online
+- model_info:
+    input_cost_1M_token: 15.0
+    max_output_tokens: 32K
+    max_tokens: 200K
+    output_cost_1M_token: 75.0
+    supports_vision: true
+  model_name: R/anthropic/claude-opus-4.1
+- model_info:
+    input_cost_1M_token: 15.0
+    max_output_tokens: 32K
+    max_tokens: 200K
+    output_cost_1M_token: 75.0
+    supports_vision: true
+  model_name: R/anthropic/claude-opus-4.1:online
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-sonnet-4
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-3.7-sonnet
+- model_info:
+    input_cost_1M_token: 0.8
+    max_output_tokens: 8K
+    max_tokens: 200K
+    output_cost_1M_token: 4.0
+    supports_vision: true
+  model_name: R/anthropic/claude-3.5-haiku
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.5-flash-09-2025
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.5-flash-lite-09-2025
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.5-flash-lite
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.5-flash
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/google/gemini-2.5-pro
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 8K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.0-flash-lite-001
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 8K
+    max_tokens: 1050K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/google/gemini-2.0-flash-001
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 8K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+  model_name: R/google/gemma-3-27b-it:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 8K
+    max_tokens: 32K
+    output_cost_1M_token: 0
+  model_name: R/google/gemma-3-12b-it:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 8K
+    max_tokens: 32K
+    output_cost_1M_token: 0
+  model_name: R/google/gemma-3-4b-it:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 2K
+    max_tokens: 8K
+    output_cost_1M_token: 0
+  model_name: R/google/gemma-3n-e4b-it:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 2K
+    max_tokens: 8K
+    output_cost_1M_token: 0
+  model_name: R/google/gemma-3n-e2b-it:free
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_vision: true
+  model_name: R/openai/gpt-5.1
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 10.0
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-chat
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-codex
+- model_info:
+    input_cost_1M_token: 0.25
+    max_output_tokens: 100K
+    max_tokens: 400K
+    output_cost_1M_token: 2.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/openai/gpt-5.1-codex-mini
+- model_info:
+    input_cost_1M_token: 0.07
+    max_output_tokens: 65K
+    max_tokens: 131K
+    output_cost_1M_token: 0.3
+    supports_reasoning: true
+  model_name: R/openai/gpt-oss-safeguard-20b
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: R/openai/gpt-oss-20b:free
+- model_info:
+    input_cost_1M_token: 10.0
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 40.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o3-deep-research
+- model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 8.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o4-mini-deep-research
+- model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 8.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-pro
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-chat
+- model_info:
+    input_cost_1M_token: 0.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 2.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-mini
+- model_info:
+    input_cost_1M_token: 0.05
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 0.4
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-nano
+- model_info:
+    input_cost_1M_token: 1.1
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 4.4
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o4-mini-high
+- model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 8.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o3
+- model_info:
+    input_cost_1M_token: 1.1
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 4.4
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o4-mini
+- model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 32K
+    max_tokens: 1050K
+    output_cost_1M_token: 8.0
+    supports_vision: true
+  model_name: R/openai/gpt-4.1
+- model_info:
+    input_cost_1M_token: 0.4
+    max_output_tokens: 32K
+    max_tokens: 1050K
+    output_cost_1M_token: 1.6
+    supports_vision: true
+  model_name: R/openai/gpt-4.1-mini
+- model_info:
+    input_cost_1M_token: 0.1
+    max_output_tokens: 32K
+    max_tokens: 1050K
+    output_cost_1M_token: 0.4
+    supports_vision: true
+  model_name: R/openai/gpt-4.1-nano
+- model_info:
+    input_cost_1M_token: 0.15
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 0.6
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-4o-mini-search-preview
+- model_info:
+    input_cost_1M_token: 2.5
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-4o-search-preview
+- model_info:
+    input_cost_1M_token: 1.1
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 4.4
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o3-mini-high
+- model_info:
+    input_cost_1M_token: 1.1
+    max_output_tokens: 100K
+    max_tokens: 200K
+    output_cost_1M_token: 4.4
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/o3-mini
+- model_info:
+    input_cost_1M_token: 5.0
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/openai/chatgpt-4o-latest
+- model_info:
+    input_cost_1M_token: 0.15
+    max_output_tokens: 16K
+    max_tokens: 128K
+    output_cost_1M_token: 0.6
+    supports_vision: true
+  model_name: R/openai/gpt-4o-mini
+- model_info:
+    input_cost_1M_token: 0.5
+    max_output_tokens: 4K
+    max_tokens: 16K
+    output_cost_1M_token: 1.5
+  model_name: R/openai/gpt-3.5-turbo
+- model_info:
+    input_cost_1M_token: 2.5
+    max_output_tokens: 32K
+    max_tokens: 1000K
+    output_cost_1M_token: 12.5
+  model_name: R/amazon/nova-premier-v1
+- model_info:
+    input_cost_1M_token: 0.02
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0.11
+  model_name: R/ibm-granite/granite-4.0-h-micro
+- model_info:
+    input_cost_1M_token: 3.5
+    max_output_tokens: 32K
+    max_tokens: 32K
+    output_cost_1M_token: 3.5
+    supports_reasoning: true
+  model_name: R/deepcogito/cogito-v2-preview-llama-405b
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/nvidia/nemotron-nano-12b-v2-vl:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 32K
+    max_tokens: 256K
+    output_cost_1M_token: 0
+  model_name: R/kwaipilot/kat-coder-pro:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 163K
+    max_tokens: 163K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: R/deepseek-r1:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 163K
+    max_tokens: 163K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: R/tngtech/deepseek-r1t-chimera:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 4K
+    max_tokens: 128K
+    output_cost_1M_token: 0
+  model_name: R/meta-llama/llama-4-maverick:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+  model_name: R/mistralai/mistral-nemo:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+  model_name: R/mistralai/mistral-small-3.2:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+  model_name: R/alibaba/tongyi-deepresearch-30b-a3b:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 32K
+    max_tokens: 32K
+    output_cost_1M_token: 0
+  model_name: R/Venice/Uncensored:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0
+  model_name: R/nvidia/nemotron-nano-9b-v2:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 96K
+    max_tokens: 96K
+    output_cost_1M_token: 0
+  model_name: R/agentica-org/deepcoder-14b-preview:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 131K
+    max_tokens: 262K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/mistralai/codestral-embed-2505
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/second_constantine/gpt-oss-u:20b
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/gpt-oss:latest
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/goekdenizguelmez/JOSIEFIED-Qwen3:latest
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/deepseek-r1:latest
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/granite4:latest
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/qwen3:4b
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/gpt-oss:20b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/gpt-oss:120b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/glm-4.6:cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/deepseek-v3.1:671b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+  model_name: ollama/qwen3-coder:480b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+    supports_vision: true
+  model_name: ollama/qwen3-vl:235b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 131K
+    max_tokens: 204K
+    output_cost_1M_token: 0.0
+  model_name: ollama/minimax-m2:cloud
