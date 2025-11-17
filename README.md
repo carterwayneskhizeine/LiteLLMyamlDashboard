@@ -24,6 +24,12 @@
 - 自动处理并转换为标准格式
 - 手动更新仪表板数据
 
+### 🔄 CCR 模型同步
+- 一键同步 LiteLLM 配置到 Claude Code Router
+- 自动提取 `litellmconfig.yaml` 中的所有模型名称
+- 更新 `config.json` 中 lite provider 的模型列表
+- 实时显示同步结果和详细日志
+
 ## 安装说明
 
 ### 前提条件
@@ -65,6 +71,23 @@ python process_yaml.py path_to_you_input.yaml processed_models.yaml
 4. 数据将自动更新到仪表板
 5. 如需手动刷新，点击 **"🔄 刷新数据"**
 
+### 同步 CCR 模型
+
+在应用界面中：
+1. 点击左侧边栏底部的 **"🔄 Sync CCR Models"** 按钮
+2. 系统将自动从 `litellmconfig.yaml` 提取模型名称
+3. 更新到 `config.json` 的 lite provider 配置中
+4. 查看同步结果和详细日志
+
+使用命令行：
+```bash
+# 使用默认路径
+python sync_ccr_models.py
+
+# 指定自定义路径
+python sync_ccr_models.py <yaml文件路径> <json文件路径>
+```
+
 ## 数据格式
 
 ### 输入YAML格式
@@ -97,8 +120,8 @@ model_list:
 |------|------|
 | `app.py` | Streamlit应用程序主文件 |
 | `process_yaml.py` | YAML数据处理脚本 |
+| `sync_ccr_models.py` | CCR模型同步脚本 |
 | `processed_models.yaml` | 处理后的模型数据文件 |
-| `litellmconfig.yaml` | 原始模型配置文件 |
 | `CLAUDE.md` | Claude Code开发指南 |
 
 ## 界面预览
@@ -109,6 +132,7 @@ model_list:
 - 免费模型开关
 - 模型名称搜索框
 - 导入配置和刷新数据按钮
+- CCR 模型同步按钮
 
 ### 主界面
 - 模型数据表格
@@ -128,6 +152,13 @@ MIT License
 欢迎提交Issue和Pull Request！
 
 ## 更新日志
+
+### v1.1.0 (2025-01-17)
+- ✨ 新增 CCR 模型同步功能
+- ✨ 新增 `sync_ccr_models.py` 脚本
+- ✨ 在仪表板侧边栏添加 "Sync CCR Models" 按钮
+- 🐛 修复 Windows 环境下的 UTF-8 编码问题
+- 📝 更新文档说明
 
 ### v1.0.0
 - 初始版本发布

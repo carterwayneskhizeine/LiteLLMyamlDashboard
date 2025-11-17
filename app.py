@@ -196,6 +196,37 @@ if st.session_state.show_uploader or st.session_state.uploaded_file_path:
                 st.session_state.show_uploader = False
                 st.rerun()
 
+# Sync CCR Models 按钮
+st.sidebar.markdown("---")
+if st.sidebar.button("🔄 Sync CCR Models", key="sync_ccr_button", use_container_width=True):
+    try:
+        with st.spinner("正在同步 CCR 模型..."):
+            result = subprocess.run(
+                [sys.executable, 'sync_ccr_models.py'],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                encoding='utf-8'
+            )
+        
+        if result.returncode == 0:
+            # 显示成功消息和输出
+            st.sidebar.success("✅ 模型同步完成!")
+            if result.stdout:
+                with st.sidebar.expander("查看详情"):
+                    st.code(result.stdout, language="text")
+        else:
+            # 显示失败消息
+            error_msg = result.stderr if result.stderr else "未知错误"
+            st.sidebar.error(f"❌ 模型同步失败")
+            with st.sidebar.expander("查看错误详情"):
+                st.code(error_msg, language="text")
+            
+    except subprocess.TimeoutExpired:
+        st.sidebar.error("❌ 模型同步失败: 操作超时")
+    except Exception as e:
+        st.sidebar.error(f"❌ 模型同步失败: {str(e)}")
+
 # 应用过滤器
 filtered_df = df.copy()
 

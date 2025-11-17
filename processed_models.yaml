@@ -1,5 +1,20 @@
 model_list:
 - model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 64K
+    max_tokens: 1840K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openrouter/sherlock-think-alpha
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 64K
+    max_tokens: 1840K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: R/openrouter/sherlock-dash-alpha
+- model_info:
     input_cost_1M_token: 0.28
     max_output_tokens: 8K
     max_tokens: 128K
@@ -739,11 +754,12 @@ model_list:
     supports_reasoning: true
   model_name: R/tngtech/deepseek-r1t-chimera:free
 - model_info:
-    input_cost_1M_token: 0
-    max_output_tokens: 4K
+    input_cost_1M_token: 0.35
+    max_output_tokens: 128K
     max_tokens: 128K
-    output_cost_1M_token: 0
-  model_name: R/meta-llama/llama-4-maverick:free
+    output_cost_1M_token: 0.85
+    supports_vision: true
+  model_name: R/meta-llama/llama-4-maverick
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 128K
@@ -756,6 +772,12 @@ model_list:
     max_tokens: 131K
     output_cost_1M_token: 0
   model_name: R/mistralai/mistral-small-3.2:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 131K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+  model_name: R/meituan/longcat-flash-chat:free
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 131K
@@ -790,13 +812,6 @@ model_list:
   model_name: R/mistralai/codestral-embed-2505
 - model_info:
     input_cost_1M_token: 0.0
-    max_output_tokens: 131K
-    max_tokens: 131K
-    output_cost_1M_token: 0.0
-    supports_reasoning: true
-  model_name: ollama/second_constantine/gpt-oss-u:20b
-- model_info:
-    input_cost_1M_token: 0.0
     max_output_tokens: 128K
     max_tokens: 128K
     output_cost_1M_token: 0.0
@@ -809,13 +824,6 @@ model_list:
     output_cost_1M_token: 0.0
     supports_reasoning: true
   model_name: ollama/goekdenizguelmez/JOSIEFIED-Qwen3:latest
-- model_info:
-    input_cost_1M_token: 0.0
-    max_output_tokens: 128K
-    max_tokens: 128K
-    output_cost_1M_token: 0.0
-    supports_reasoning: true
-  model_name: ollama/deepseek-r1:latest
 - model_info:
     input_cost_1M_token: 0.0
     max_output_tokens: 128K
