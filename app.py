@@ -227,6 +227,63 @@ if st.sidebar.button("🔄 Sync CCR Models", key="sync_ccr_button", use_containe
     except Exception as e:
         st.sidebar.error(f"❌ 模型同步失败: {str(e)}")
 
+# Copy Models List 按钮
+st.sidebar.markdown("---")
+if st.sidebar.button("📋 Copy Models List", key="copy_models_button", use_container_width=True):
+    try:
+        # 重新应用过滤器获取当前显示的模型
+        current_filtered_df = df.copy()
+        
+        # 价格过滤
+        current_filtered_df = current_filtered_df[
+            (current_filtered_df['input_cost_1M_token'] >= min_input_cost) &
+            (current_filtered_df['input_cost_1M_token'] <= max_input_cost) &
+            (current_filtered_df['output_cost_1M_token'] >= min_output_cost) &
+            (current_filtered_df['output_cost_1M_token'] <= max_output_cost)
+        ]
+        
+        # 功能过滤
+        if show_reasoning:
+            current_filtered_df = current_filtered_df[current_filtered_df['supports_reasoning'] == True]
+        if show_vision:
+            current_filtered_df = current_filtered_df[current_filtered_df['supports_vision'] == True]
+        
+        # 免费模型过滤
+        if show_free_only:
+            current_filtered_df = current_filtered_df[
+                (current_filtered_df['input_cost_1M_token'] == 0) &
+                (current_filtered_df['output_cost_1M_token'] == 0)
+            ]
+        
+        # 搜索过滤
+        if search_term:
+            current_filtered_df = current_filtered_df[
+                current_filtered_df['model_name'].str.contains(search_term, case=False, na=False)
+            ]
+        
+        # 获取模型名称列表
+        model_names = current_filtered_df['model_name'].tolist()
+        
+        # 格式化为指定的JSON格式
+        models_json = '  "models": [\n'
+        for i, model in enumerate(model_names):
+            if i == len(model_names) - 1:
+                models_json += f'    "{model}"\n'
+            else:
+                models_json += f'    "{model}",\n'
+        models_json += '  ],'
+        
+        # 显示复制的内容预览（默认展开）
+        with st.sidebar.expander("查看复制内容", expanded=True):
+            st.code(models_json, language="json")
+        
+        # 将内容存储到session state中，以便在页面重新加载时使用
+        st.session_state.clipboard_content = models_json
+        st.session_state.show_copy_success = True
+        
+    except Exception as e:
+        st.sidebar.error(f"❌ 复制失败: {str(e)}")
+
 # 应用过滤器
 filtered_df = df.copy()
 
@@ -291,6 +348,6 @@ display_df.index.name = '#'
 # 显示表格 - 占满主内容区域
 st.dataframe(
     display_df,
-    width='stretch',
+    use_container_width=True,
     height=600
 )
