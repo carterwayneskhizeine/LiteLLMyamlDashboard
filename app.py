@@ -198,7 +198,7 @@ if st.session_state.show_uploader or st.session_state.uploaded_file_path:
 
 # Sync CCR Models 按钮
 st.sidebar.markdown("---")
-if st.sidebar.button("🔄 Sync CCR Models", key="sync_ccr_button", use_container_width=True):
+if st.sidebar.button("🔄 Sync CCR Models", key="sync_ccr_button", width='stretch'):
     try:
         with st.spinner("正在同步 CCR 模型..."):
             result = subprocess.run(
@@ -229,7 +229,7 @@ if st.sidebar.button("🔄 Sync CCR Models", key="sync_ccr_button", use_containe
 
 # Copy Models List 按钮
 st.sidebar.markdown("---")
-if st.sidebar.button("📋 Copy Models List", key="copy_models_button", use_container_width=True):
+if st.sidebar.button("📋 Copy Models List", key="copy_models_button", width='stretch'):
     try:
         # 重新应用过滤器获取当前显示的模型
         current_filtered_df = df.copy()
@@ -348,6 +348,6 @@ display_df.index.name = '#'
 # 显示表格 - 占满主内容区域
 st.dataframe(
     display_df,
-    use_container_width=True,
+    width='stretch',
     height=600
 )
