@@ -88,6 +88,17 @@ python sync_ccr_models.py
 python sync_ccr_models.py <yaml文件路径> <json文件路径>
 ```
 
+### 配置默认路径
+
+默认路径定义在 [`config_paths.py`](config_paths.py) 中：
+
+- `LITELLM_CONFIG_PATH`：LiteLLM 配置 YAML 文件路径（默认：`C:\Users\gotmo\litellmconfig.yaml`）
+- `CLAUDE_CONFIG_PATH`：Claude Code Router 配置 JSON 文件路径（默认：`C:\Users\gotmo\.claude-code-router\config.json`）
+
+**修改方法**：直接编辑 [`config_paths.py`](config_paths.py) 文件更改路径，无需修改脚本代码。
+
+命令行参数将覆盖这些默认值。
+
 ## 数据格式
 
 ### 输入YAML格式
@@ -121,6 +132,7 @@ model_list:
 | `app.py` | Streamlit应用程序主文件 |
 | `process_yaml.py` | YAML数据处理脚本 |
 | `sync_ccr_models.py` | CCR模型同步脚本 |
+| `config_paths.py` | sync_ccr_models.py 的配置文件路径定义，修改此文件更改默认路径 |
 | `processed_models.yaml` | 处理后的模型数据文件 |
 | `CLAUDE.md` | Claude Code开发指南 |
 
@@ -146,22 +158,3 @@ model_list:
 ## 许可证
 
 MIT License
-
-## 贡献
-
-欢迎提交Issue和Pull Request！
-
-## 更新日志
-
-### v1.1.0 (2025-01-17)
-- ✨ 新增 CCR 模型同步功能
-- ✨ 新增 `sync_ccr_models.py` 脚本
-- ✨ 在仪表板侧边栏添加 "Sync CCR Models" 按钮
-- 🐛 修复 Windows 环境下的 UTF-8 编码问题
-- 📝 更新文档说明
-
-### v1.0.0
-- 初始版本发布
-- 支持模型数据展示和筛选
-- 支持YAML配置导入功能
-- 添加输出成本筛选选项

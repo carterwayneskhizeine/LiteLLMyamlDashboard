@@ -11,6 +11,8 @@ import sys
 import io
 from typing import List, Tuple
 
+import config_paths
+
 # 设置 stdout 为 UTF-8 编码，避免 Windows 下的 GBK 编码问题
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -70,20 +72,17 @@ def update_config_json(json_file: str, model_names: List[str]) -> Tuple[bool, st
         if 'Providers' not in config:
             return False, "config.json 中未找到 Providers 配置"
         
-        lite_provider_found = False
         for provider in config['Providers']:
             if provider.get('name') == 'lite':
                 old_count = len(provider.get('models', []))
                 provider['models'] = model_names
-                lite_provider_found = True
                 
                 with open(json_file, 'w', encoding='utf-8') as f:
                     json.dump(config, f, indent=2, ensure_ascii=False)
                 
                 return True, f"成功更新 lite provider 的模型列表 (原: {old_count} 个, 新: {len(model_names)} 个)"
         
-        if not lite_provider_found:
-            return False, "未找到名为 'lite' 的 Provider"
+        return False, "未找到名为 'lite' 的 Provider"
     
     except FileNotFoundError:
         return False, f"文件未找到: {json_file}"
@@ -93,8 +92,8 @@ def update_config_json(json_file: str, model_names: List[str]) -> Tuple[bool, st
         return False, f"更新配置时出错: {str(e)}"
 
 
-def sync_models(yaml_file: str = r'C:\Users\gotmo\litellmconfig.yaml',
-                json_file: str = r'C:\Users\gotmo\.claude-code-router\config.json') -> Tuple[bool, str]:
+def sync_models(yaml_file: str = config_paths.LITELLM_CONFIG_PATH,
+                json_file: str = config_paths.CLAUDE_CONFIG_PATH) -> Tuple[bool, str]:
     """
     Main function to sync models from YAML to JSON
     
@@ -133,8 +132,8 @@ def sync_models(yaml_file: str = r'C:\Users\gotmo\litellmconfig.yaml',
 
 if __name__ == '__main__':
     # Get file paths from command line arguments or use defaults
-    yaml_file = sys.argv[1] if len(sys.argv) > 1 else r'C:\Users\gotmo\litellmconfig.yaml'
-    json_file = sys.argv[2] if len(sys.argv) > 2 else r'C:\Users\gotmo\.claude-code-router\config.json'
+    yaml_file = sys.argv[1] if len(sys.argv) > 1 else config_paths.LITELLM_CONFIG_PATH
+    json_file = sys.argv[2] if len(sys.argv) > 2 else config_paths.CLAUDE_CONFIG_PATH
     
     success, message = sync_models(yaml_file, json_file)
     

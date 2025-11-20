@@ -1,3 +1,4 @@
 temp_uploads/
 litellmconfig.yaml
 config.json
+__pycache__/

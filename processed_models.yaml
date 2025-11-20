@@ -1,5 +1,21 @@
 model_list:
 - model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 30K
+    max_tokens: 2000K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/grok-4-1-fast:free
+- model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 12.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/google/gemini-3-pro-preview
+- model_info:
     input_cost_1M_token: 3.0
     max_output_tokens: 64K
     max_tokens: 1000K
@@ -133,6 +149,21 @@ model_list:
     supports_reasoning: true
     supports_vision: true
   model_name: GLM/glm-4.5v-official
+- model_info:
+    input_cost_1M_token: 0.2
+    max_output_tokens: 30K
+    max_tokens: 2000K
+    output_cost_1M_token: 0.5
+    supports_vision: true
+  model_name: XAI/grok-4-1-fast-non-reasoning-official
+- model_info:
+    input_cost_1M_token: 0.2
+    max_output_tokens: 30K
+    max_tokens: 2000K
+    output_cost_1M_token: 0.5
+    supports_reasoning: true
+    supports_vision: true
+  model_name: XAI/grok-4-1-fast-reasoning-official
 - model_info:
     input_cost_1M_token: 0.2
     max_output_tokens: 10K
