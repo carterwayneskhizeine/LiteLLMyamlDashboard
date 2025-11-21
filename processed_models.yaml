@@ -45,21 +45,6 @@ model_list:
     supports_vision: true
   model_name: replicate/xai/grok-4
 - model_info:
-    input_cost_1M_token: 0
-    max_output_tokens: 64K
-    max_tokens: 1840K
-    output_cost_1M_token: 0
-    supports_reasoning: true
-    supports_vision: true
-  model_name: R/openrouter/sherlock-think-alpha
-- model_info:
-    input_cost_1M_token: 0
-    max_output_tokens: 64K
-    max_tokens: 1840K
-    output_cost_1M_token: 0
-    supports_vision: true
-  model_name: R/openrouter/sherlock-dash-alpha
-- model_info:
     input_cost_1M_token: 0.28
     max_output_tokens: 8K
     max_tokens: 128K
@@ -234,6 +219,13 @@ model_list:
     output_cost_1M_token: 1.69
     supports_reasoning: true
   model_name: S/deepseek-ai/DeepSeek-V3.1-Terminus
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0
+    supports_vision: true
+  model_name: S/deepseek-ai/DeepSeek-OCR
 - model_info:
     input_cost_1M_token: 0.56
     max_output_tokens: 262K
@@ -932,3 +924,10 @@ model_list:
     output_cost_1M_token: 0.0
     supports_reasoning: true
   model_name: ollama/qwen3:4b
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.0
+    supports_vision: true
+  model_name: ollama/DeepSeek-OCR
