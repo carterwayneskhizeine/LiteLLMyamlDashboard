@@ -16,6 +16,14 @@ model_list:
     supports_vision: true
   model_name: R/google/gemini-3-pro-preview
 - model_info:
+    input_cost_1M_token: 2.0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 12.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: replicate/google/gemini-3-pro
+- model_info:
     input_cost_1M_token: 3.0
     max_output_tokens: 64K
     max_tokens: 1000K
@@ -105,13 +113,6 @@ model_list:
     output_cost_1M_token: 4.23
     supports_vision: true
   model_name: M/moonshot-v1-128k-v-official
-- model_info:
-    input_cost_1M_token: 0
-    max_output_tokens: 128K
-    max_tokens: 200K
-    output_cost_1M_token: 0
-    supports_reasoning: true
-  model_name: GLM/glm-4.6-official
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 96K

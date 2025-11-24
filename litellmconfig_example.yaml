@@ -15,7 +15,7 @@ litellm_settings:
 model_list:
   - model_name: R/grok-4-1-fast:free
     litellm_params:
-      model: openrouter/x-ai/grok-4.1-fast
+      model: openrouter/x-ai/grok-4.1-fast:free
       api_key: os.environ/OPENROUTER_API_KEY
       extra_body:
         include_reasoning: true
@@ -41,6 +41,27 @@ model_list:
     litellm_params:
       model: openrouter/google/gemini-3-pro-preview
       api_key: os.environ/OPENROUTER_API_KEY
+    model_info:
+      mode: chat
+      input_cost_per_token: 0.000002
+      output_cost_per_token: 0.000012
+      cache_read_input_token_cost: 0.0000002
+      input_cost_per_token_above_200k_tokens: 0.000004
+      output_cost_per_token_above_200k_tokens: 0.000018
+      cache_read_input_token_cost_above_200k_tokens: 0.0000004
+      max_tokens: 1050000
+      max_input_tokens: 1050000
+      max_output_tokens: 65500
+      supports_vision: true
+      supports_function_calling: true
+      supports_tool_choice: true
+      supports_reasoning: true
+      supported_openai_params: ["structured_outputs", "response_format", "max_tokens", "temperature", "top_p", "seed", "stop", "tools", "tool_choice"]
+      
+  - model_name: replicate/google/gemini-3-pro
+    litellm_params:
+      model: replicate/google/gemini-3-pro
+      api_key: os.environ/REPLICATE_API_KEY
     model_info:
       mode: chat
       input_cost_per_token: 0.000002
@@ -133,41 +154,6 @@ model_list:
       supports_function_calling: true
       supports_tool_choice: true
       supported_openai_params: ["structured_outputs", "max_tokens", "temperature", "top_p", "seed", "logprobs", "top_logprobs", "response_format", "tools", "tool_choice"]
-
-  - model_name: R/openrouter/sherlock-think-alpha
-    litellm_params:
-      model: openrouter/openrouter/sherlock-think-alpha
-      api_key: os.environ/OPENROUTER_API_KEY
-    model_info:
-      mode: chat
-      input_cost_per_token: 0
-      output_cost_per_token: 0
-      cache_read_input_token_cost: 0
-      max_tokens: 1840000
-      max_input_tokens: 1840000
-      max_output_tokens: 64000
-      supports_vision: true
-      supports_function_calling: true
-      supports_tool_choice: true
-      supports_reasoning: true
-      supported_openai_params: ["max_tokens", "response_format", "structured_outputs", "tool_choice", "tools"]
-      
-  - model_name: R/openrouter/sherlock-dash-alpha
-    litellm_params:
-      model: openrouter/openrouter/sherlock-dash-alpha
-      api_key: os.environ/OPENROUTER_API_KEY
-    model_info:
-      mode: chat
-      input_cost_per_token: 0
-      output_cost_per_token: 0
-      cache_read_input_token_cost: 0
-      max_tokens: 1840000
-      max_input_tokens: 1840000
-      max_output_tokens: 64000
-      supports_vision: true
-      supports_function_calling: true
-      supports_tool_choice: true
-      supported_openai_params: ["max_tokens", "response_format", "structured_outputs", "tool_choice", "tools"]
 
   - model_name: D/deepseek-chat-official
     litellm_params:
@@ -334,23 +320,23 @@ model_list:
       supported_openai_params: ["max_tokens", "temperature", "top_p", "stop", "frequency_penalty", "presence_penalty", "tool_choice", "tools", "structured_outputs", "response_format"]
 
   # ZhipuAI	glm-4.6 Chat completions
-  - model_name: GLM/glm-4.6-official
-    litellm_params:
-      model: openai/glm-4.6
-      api_key: os.environ/ZHIPU_API_KEY
-      api_base: https://open.bigmodel.cn/api/paas/v4
-    model_info:
-      mode: chat
-      input_cost_per_token: 0
-      cache_read_input_token_cost: 0
-      output_cost_per_token: 0
-      max_tokens: 200000
-      max_input_tokens: 200000
-      max_output_tokens: 128000
-      supports_function_calling: true
-      supports_tool_choice: true
-      supports_reasoning: true
-      supported_openai_params: ["max_tokens", "structured_outputs", "response_format", "temperature", "top_p", "tools", "tool_choice"]
+  #- model_name: GLM/glm-4.6-official
+    #litellm_params:
+      #model: openai/glm-4.6
+      #api_key: os.environ/ZHIPU_API_KEY
+      #api_base: https://open.bigmodel.cn/api/paas/v4
+    #model_info:
+      #mode: chat
+      #input_cost_per_token: 0
+      #cache_read_input_token_cost: 0
+      #output_cost_per_token: 0
+      #max_tokens: 200000
+      #max_input_tokens: 200000
+      #max_output_tokens: 128000
+      #supports_function_calling: true
+      #supports_tool_choice: true
+      #supports_reasoning: true
+      #supported_openai_params: ["max_tokens", "structured_outputs", "response_format", "temperature", "top_p", "tools", "tool_choice"]
       
   - model_name: GLM/glm-4.5-official
     litellm_params:
@@ -640,6 +626,21 @@ model_list:
       supports_tool_choice: true
       supports_reasoning: true
       supported_openai_params: ["structured_outputs", "response_format", "temperature", "top_p", "tools", "tool_choice", "frequency_penalty"]
+      
+  - model_name: S/deepseek-ai/DeepSeek-OCR
+    litellm_params:
+      model: openai/deepseek-ai/DeepSeek-OCR
+      api_key: os.environ/SILICONFLOW_API_KEY
+      api_base: https://api.siliconflow.cn/v1/
+    model_info:
+      mode: chat
+      input_cost_per_token: 0
+      cache_read_input_token_cost: 0
+      output_cost_per_token: 0
+      max_tokens: 128000
+      max_input_tokens: 8000
+      max_output_tokens: 128000
+      supports_vision: true
 
   - model_name: S/moonshotai/Kimi-K2-Thinking
     litellm_params:
@@ -2362,3 +2363,15 @@ model_list:
       max_output_tokens: 128000
       supports_function_calling: true
       supports_reasoning: true
+      
+  - model_name: ollama/DeepSeek-OCR
+    litellm_params:
+      model: ollama/DeepSeek-OCR
+      api_base: http://192.168.1.111:11434
+    model_info:
+      access_groups: ["ollama"]
+      mode: chat
+      max_tokens: 128000
+      max_input_tokens: 8000
+      max_output_tokens: 128000
+      supports_vision: true
