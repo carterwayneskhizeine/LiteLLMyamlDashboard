@@ -1,0 +1,12 @@
+.git
+.gitignore
+__pycache__
+*.md
+*.ps1
+*.png
+temp_uploads
+.dockerignore
+Dockerfile
+docker-compose.yml
+venv
+.env

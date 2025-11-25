@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: litellm_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount the config file.
+      # IMPORTANT: Rename your 'litellmconfig_example.yaml' to 'litellmconfig.yaml' on your host machine.
+      - ./litellmconfig.yaml:/app/litellmconfig.yaml
+
+      # Mount the processed models file to persist changes.
+      - ./processed_models.yaml:/app/processed_models.yaml
+
+      # Mount the temp_uploads directory to persist uploads.
+      - ./temp_uploads:/app/temp_uploads
+    restart: unless-stopped

@@ -32,10 +32,12 @@
 
 ## 安装说明
 
-### 前提条件
-- Python 3.7 或更高版本
+推荐使用 Docker Compose 部署，详情请参见 [Docker Compose 部署](#docker-compose-部署-推荐)
 
-### 安装依赖
+### 前提条件
+- Python 3.7 或更高版本 (如果选择非 Docker 部署)
+
+### 安装依赖 (如果选择非 Docker 部署)
 
 ```bash
 pip install streamlit pyyaml pandas
@@ -43,7 +45,9 @@ pip install streamlit pyyaml pandas
 
 ## 使用方法
 
-### 启动应用
+推荐使用 Docker Compose 部署，详情请参见 [Docker Compose 部署](#docker-compose-部署-推荐)
+
+### 启动应用 (如果选择非 Docker 部署)
 
 ```bash
 streamlit run app.py
@@ -135,6 +139,55 @@ model_list:
 | `config_paths.py` | sync_ccr_models.py 的配置文件路径定义，修改此文件更改默认路径 |
 | `processed_models.yaml` | 处理后的模型数据文件 |
 | `CLAUDE.md` | Claude Code开发指南 |
+
+## Docker Compose 部署 (推荐)
+
+使用 Docker Compose 可以更便捷地部署和管理此应用。
+
+### 前提条件
+
+- 安装 Docker 和 Docker Compose。
+
+### 设置配置文件
+
+在项目根目录下，将 `litellmconfig_example.yaml` 文件重命名为 `litellmconfig.yaml`。您可以通过修改此文件来配置您的模型列表。
+
+```bash
+mv litellmconfig_example.yaml litellmconfig.yaml
+```
+**注意**：在 Windows 系统上，请使用 `ren litellmconfig_example.yaml litellmconfig.yaml` 命令。
+
+### 运行应用
+
+在项目根目录中执行以下命令以首次构建并运行应用：
+
+```bash
+docker-compose up --build -d
+```
+
+- `--build`：在首次运行或 `Dockerfile` 等源文件发生变化时重建镜像。
+- `-d`：在后台运行容器。
+
+应用将在 `http://localhost:8501` 上运行。
+
+对于后续启动，您只需运行：
+```bash
+docker-compose up -d
+```
+
+### 停止应用
+
+```bash
+docker-compose down
+```
+
+### 数据持久化
+
+`docker-compose.yml` 配置了数据卷，以确保以下文件和目录在容器重启后数据不会丢失：
+
+- `./litellmconfig.yaml`：您的主配置文件。
+- `./processed_models.yaml`：应用处理后生成的模型数据。
+- `./temp_uploads`：通过应用上传的临时文件。
 
 ## 界面预览
 
