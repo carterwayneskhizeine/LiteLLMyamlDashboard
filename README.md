@@ -99,9 +99,27 @@ python sync_ccr_models.py <yaml文件路径> <json文件路径>
 - `LITELLM_CONFIG_PATH`：LiteLLM 配置 YAML 文件路径（默认：`C:\Users\gotmo\litellmconfig.yaml`）
 - `CLAUDE_CONFIG_PATH`：Claude Code Router 配置 JSON 文件路径（默认：`C:\Users\gotmo\.claude-code-router\config.json`）
 
-**修改方法**：直接编辑 [`config_paths.py`](config_paths.py) 文件更改路径，无需修改脚本代码。
+**修改方法**：
+- **本地环境**：直接编辑 [`config_paths.py`](config_paths.py) 文件更改路径
+- **Docker 环境**：编辑 [`config_paths_docker.py`](config_paths_docker.py) 文件更改路径，并确保 [`docker-compose.yml`](docker-compose.yml) 中的卷映射正确
 
 命令行参数将覆盖这些默认值。
+
+### Docker 环境配置
+
+在 Docker 环境中运行时，需要确保以下文件路径正确映射：
+
+1. **LiteLLM 配置文件**：在 [`docker-compose.yml`](docker-compose.yml) 中映射实际的 litellmconfig.yaml 文件
+2. **Claude Code Router 配置文件**：在 [`docker-compose.yml`](docker-compose.yml) 中映射实际的 config.json 文件
+3. **配置路径文件**：使用 [`config_paths_docker.py`](config_paths_docker.py) 定义容器内的路径
+
+示例 Docker 卷映射：
+```yaml
+volumes:
+  - ./litellmconfig.yaml:/app/litellmconfig.yaml
+  - C:\Users\gotmo\.claude-code-router\config.json:/app/claude_config.json
+  - D:\Code\LiteLLM_OpenWebUI_Docker\litellmconfig.yaml:/app/real_litellmconfig.yaml
+```
 
 ## 数据格式
 
@@ -136,7 +154,8 @@ model_list:
 | `app.py` | Streamlit应用程序主文件 |
 | `process_yaml.py` | YAML数据处理脚本 |
 | `sync_ccr_models.py` | CCR模型同步脚本 |
-| `config_paths.py` | sync_ccr_models.py 的配置文件路径定义，修改此文件更改默认路径 |
+| `config_paths.py` | 本地环境的配置文件路径定义 |
+| `config_paths_docker.py` | Docker 环境的配置文件路径定义 |
 | `processed_models.yaml` | 处理后的模型数据文件 |
 | `CLAUDE.md` | Claude Code开发指南 |
 

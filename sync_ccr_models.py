@@ -11,7 +11,19 @@ import sys
 import io
 from typing import List, Tuple
 
+import os
 import config_paths
+
+# 检查是否在 Docker 环境中运行
+if os.path.exists('/.dockerenv'):
+    # 在 Docker 环境中使用 Docker 专用的配置路径
+    import config_paths_docker
+    LITELLM_CONFIG_PATH = config_paths_docker.LITELLM_CONFIG_PATH
+    CLAUDE_CONFIG_PATH = config_paths_docker.CLAUDE_CONFIG_PATH
+else:
+    # 在本地环境中使用本地的配置路径
+    LITELLM_CONFIG_PATH = config_paths.LITELLM_CONFIG_PATH
+    CLAUDE_CONFIG_PATH = config_paths.CLAUDE_CONFIG_PATH
 
 # 设置 stdout 为 UTF-8 编码，避免 Windows 下的 GBK 编码问题
 if sys.platform == 'win32':
@@ -92,8 +104,8 @@ def update_config_json(json_file: str, model_names: List[str]) -> Tuple[bool, st
         return False, f"更新配置时出错: {str(e)}"
 
 
-def sync_models(yaml_file: str = config_paths.LITELLM_CONFIG_PATH,
-                json_file: str = config_paths.CLAUDE_CONFIG_PATH) -> Tuple[bool, str]:
+def sync_models(yaml_file: str = LITELLM_CONFIG_PATH,
+                json_file: str = CLAUDE_CONFIG_PATH) -> Tuple[bool, str]:
     """
     Main function to sync models from YAML to JSON
     
@@ -132,8 +144,8 @@ def sync_models(yaml_file: str = config_paths.LITELLM_CONFIG_PATH,
 
 if __name__ == '__main__':
     # Get file paths from command line arguments or use defaults
-    yaml_file = sys.argv[1] if len(sys.argv) > 1 else config_paths.LITELLM_CONFIG_PATH
-    json_file = sys.argv[2] if len(sys.argv) > 2 else config_paths.CLAUDE_CONFIG_PATH
+    yaml_file = sys.argv[1] if len(sys.argv) > 1 else LITELLM_CONFIG_PATH
+    json_file = sys.argv[2] if len(sys.argv) > 2 else CLAUDE_CONFIG_PATH
     
     success, message = sync_models(yaml_file, json_file)
     
