@@ -1,5 +1,11 @@
 model_list:
 - model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: '0'
+    max_tokens: '0'
+    output_cost_1M_token: 0.0
+  model_name: context7-mcp
+- model_info:
     input_cost_1M_token: 0
     max_output_tokens: 30K
     max_tokens: 2000K
@@ -7,6 +13,27 @@ model_list:
     supports_reasoning: true
     supports_vision: true
   model_name: R/grok-4-1-fast:free
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openrouter/bert-nebulon-alpha
+- model_info:
+    input_cost_1M_token: 0.3
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.9
+  model_name: R/mistralai/codestral-2508
+- model_info:
+    input_cost_1M_token: 5.0
+    max_output_tokens: 32K
+    max_tokens: 200K
+    output_cost_1M_token: 25.0
+    supports_vision: true
+  model_name: R/anthropic/claude-opus-4.5
 - model_info:
     input_cost_1M_token: 2.0
     max_output_tokens: 65K
@@ -807,7 +834,7 @@ model_list:
     max_tokens: 163K
     output_cost_1M_token: 0
     supports_reasoning: true
-  model_name: R/tngtech/deepseek-r1t-chimera:free
+  model_name: R/tngtech/tng-r1t-chimera:free
 - model_info:
     input_cost_1M_token: 0.35
     max_output_tokens: 128K
@@ -820,13 +847,13 @@ model_list:
     max_output_tokens: 128K
     max_tokens: 131K
     output_cost_1M_token: 0
-  model_name: R/mistralai/mistral-nemo:free
+  model_name: R/mistralai/mistral-7b:free
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 131K
     max_tokens: 131K
     output_cost_1M_token: 0
-  model_name: R/mistralai/mistral-small-3.2:free
+  model_name: R/mistralai/mistral-small-3.1-24b:free
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 131K
