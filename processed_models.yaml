@@ -14,6 +14,66 @@ model_list:
     supports_vision: true
   model_name: R/grok-4-1-fast:free
 - model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/claude-sonnet-4.5-high
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/claude-sonnet-4.5-medium
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/claude-sonnet-4.5-low
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/claude-sonnet-4.5-minimal
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-high
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-medium
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-low
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-minimal
+- model_info:
     input_cost_1M_token: 0
     max_output_tokens: 256K
     max_tokens: 256K
@@ -21,6 +81,13 @@ model_list:
     supports_reasoning: true
     supports_vision: true
   model_name: R/openrouter/bert-nebulon-alpha
+- model_info:
+    input_cost_1M_token: 0.04
+    max_output_tokens: 32K
+    max_tokens: 131K
+    output_cost_1M_token: 0.2
+    supports_reasoning: true
+  model_name: R/openai/gpt-oss-120b
 - model_info:
     input_cost_1M_token: 0.3
     max_output_tokens: 256K
@@ -43,43 +110,6 @@ model_list:
     supports_vision: true
   model_name: R/google/gemini-3-pro-preview
 - model_info:
-    input_cost_1M_token: 2.0
-    max_output_tokens: 65K
-    max_tokens: 1050K
-    output_cost_1M_token: 12.0
-    supports_reasoning: true
-    supports_vision: true
-  model_name: replicate/google/gemini-3-pro
-- model_info:
-    input_cost_1M_token: 3.0
-    max_output_tokens: 64K
-    max_tokens: 1000K
-    output_cost_1M_token: 15.0
-    supports_vision: true
-  model_name: replicate/anthropic/claude-4.5-sonnet
-- model_info:
-    input_cost_1M_token: 1.0
-    max_output_tokens: 64K
-    max_tokens: 200K
-    output_cost_1M_token: 5.0
-    supports_vision: true
-  model_name: replicate/anthropic/claude-4.5-haiku
-- model_info:
-    input_cost_1M_token: 1.25
-    max_output_tokens: 128K
-    max_tokens: 400K
-    output_cost_1M_token: 10.0
-    supports_reasoning: true
-    supports_vision: true
-  model_name: replicate/openai/gpt-5.1
-- model_info:
-    input_cost_1M_token: 3.0
-    max_output_tokens: 256K
-    max_tokens: 256K
-    output_cost_1M_token: 15.0
-    supports_vision: true
-  model_name: replicate/xai/grok-4
-- model_info:
     input_cost_1M_token: 0.28
     max_output_tokens: 8K
     max_tokens: 128K
@@ -92,6 +122,94 @@ model_list:
     output_cost_1M_token: 0.42
     supports_reasoning: true
   model_name: D/deepseek-reasoner-official
+- model_info:
+    input_cost_1M_token: 1.41
+    max_output_tokens: 65K
+    max_tokens: 262K
+    output_cost_1M_token: 5.64
+    supports_reasoning: true
+  model_name: aliyun/qwen3-max-preview-thinking
+- model_info:
+    input_cost_1M_token: 1.41
+    max_output_tokens: 65K
+    max_tokens: 262K
+    output_cost_1M_token: 5.64
+    supports_reasoning: true
+  model_name: aliyun/qwen3-max-preview
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 65K
+    max_tokens: 262K
+    output_cost_1M_token: 1.41
+    supports_reasoning: true
+    supports_vision: true
+  model_name: aliyun/qwen3-vl-plus-thinking
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 65K
+    max_tokens: 262K
+    output_cost_1M_token: 1.41
+    supports_vision: true
+  model_name: aliyun/qwen3-vl-plus
+- model_info:
+    input_cost_1M_token: 0.25
+    max_output_tokens: 16K
+    max_tokens: 48K
+    output_cost_1M_token: 0.97
+    supports_vision: true
+  model_name: aliyun/qwen3-omni-flash
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 2.26
+  model_name: aliyun/qwen3-coder-plus
+- model_info:
+    input_cost_1M_token: 0.14
+    max_output_tokens: 64K
+    max_tokens: 997K
+    output_cost_1M_token: 0.56
+  model_name: aliyun/qwen3-coder-flash
+- model_info:
+    input_cost_1M_token: 7.61
+    max_output_tokens: 32K
+    max_tokens: 997K
+    output_cost_1M_token: 22.98
+    supports_reasoning: true
+  model_name: aliyun/qwen-deep-research
+- model_info:
+    input_cost_1M_token: 0.04
+    max_output_tokens: 8K
+    max_tokens: 30K
+    output_cost_1M_token: 0.07
+  model_name: aliyun/qwen-vl-ocr
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 64K
+    max_tokens: 96K
+    output_cost_1M_token: 0.42
+    supports_reasoning: true
+  model_name: aliyun/deepseek-v3.2-exp-thinking-search
+- model_info:
+    input_cost_1M_token: 0.42
+    max_output_tokens: 16K
+    max_tokens: 198K
+    output_cost_1M_token: 1.97
+    supports_reasoning: true
+  model_name: aliyun/glm-4.6
+- model_info:
+    input_cost_1M_token: 0.42
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 1.97
+  model_name: aliyun/Kimi-K2-Instruct
+- model_info:
+    input_cost_1M_token: 0.56
+    max_output_tokens: 16K
+    max_tokens: 224K
+    output_cost_1M_token: 2.26
+    supports_reasoning: true
+  model_name: aliyun/kimi-k2-thinking
 - model_info:
     input_cost_1M_token: 0.3
     max_output_tokens: 131K
@@ -498,11 +616,25 @@ model_list:
   model_name: R/anthropic/claude-sonnet-4
 - model_info:
     input_cost_1M_token: 3.0
+    max_output_tokens: 64K
+    max_tokens: 1000K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-sonnet-4-high
+- model_info:
+    input_cost_1M_token: 3.0
     max_output_tokens: 128K
     max_tokens: 200K
     output_cost_1M_token: 15.0
     supports_vision: true
   model_name: R/anthropic/claude-3.7-sonnet
+- model_info:
+    input_cost_1M_token: 3.0
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 15.0
+    supports_vision: true
+  model_name: R/anthropic/claude-3.7-sonnet-high
 - model_info:
     input_cost_1M_token: 0.8
     max_output_tokens: 8K
@@ -592,14 +724,6 @@ model_list:
   model_name: R/google/gemma-3n-e2b-it:free
 - model_info:
     input_cost_1M_token: 1.25
-    max_output_tokens: 128K
-    max_tokens: 400K
-    output_cost_1M_token: 10.0
-    supports_reasoning: true
-    supports_vision: true
-  model_name: R/openai/gpt-5.1
-- model_info:
-    input_cost_1M_token: 1.25
     max_output_tokens: 16K
     max_tokens: 128K
     output_cost_1M_token: 10.0
@@ -614,6 +738,38 @@ model_list:
     supports_reasoning: true
     supports_vision: true
   model_name: R/openai/gpt-5.1-codex
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-codex-high
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-codex-medium
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-codex-low
+- model_info:
+    input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5.1-codex-minimal
 - model_info:
     input_cost_1M_token: 0.25
     max_output_tokens: 100K
@@ -670,6 +826,14 @@ model_list:
   model_name: R/openai/gpt-5
 - model_info:
     input_cost_1M_token: 1.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 10.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-high
+- model_info:
+    input_cost_1M_token: 1.25
     max_output_tokens: 16K
     max_tokens: 128K
     output_cost_1M_token: 10.0
@@ -684,6 +848,14 @@ model_list:
     supports_reasoning: true
     supports_vision: true
   model_name: R/openai/gpt-5-mini
+- model_info:
+    input_cost_1M_token: 0.25
+    max_output_tokens: 128K
+    max_tokens: 400K
+    output_cost_1M_token: 2.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: R/openai/gpt-5-mini-high
 - model_info:
     input_cost_1M_token: 0.05
     max_output_tokens: 128K
@@ -821,13 +993,6 @@ model_list:
     max_tokens: 256K
     output_cost_1M_token: 0
   model_name: R/kwaipilot/kat-coder-pro:free
-- model_info:
-    input_cost_1M_token: 0
-    max_output_tokens: 163K
-    max_tokens: 163K
-    output_cost_1M_token: 0
-    supports_reasoning: true
-  model_name: R/deepseek-r1:free
 - model_info:
     input_cost_1M_token: 0
     max_output_tokens: 163K
