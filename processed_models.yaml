@@ -123,6 +123,20 @@ model_list:
     supports_reasoning: true
   model_name: D/deepseek-reasoner-official
 - model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.42
+    supports_reasoning: true
+  model_name: D/deepseek-v3.2-speciale-official
+- model_info:
+    input_cost_1M_token: 0.28
+    max_output_tokens: 128K
+    max_tokens: 128K
+    output_cost_1M_token: 0.42
+    supports_reasoning: true
+  model_name: R/deepseek/deepseek-v3.2-speciale
+- model_info:
     input_cost_1M_token: 1.41
     max_output_tokens: 65K
     max_tokens: 262K
@@ -966,6 +980,7 @@ model_list:
     max_output_tokens: 32K
     max_tokens: 1000K
     output_cost_1M_token: 12.5
+    supports_reasoning: true
   model_name: R/amazon/nova-premier-v1
 - model_info:
     input_cost_1M_token: 0.02
