@@ -7,6 +7,25 @@ model_list:
   model_name: context7-mcp
 - model_info:
     input_cost_1M_token: 0
+    max_output_tokens: 1000K
+    max_tokens: 1000K
+    output_cost_1M_token: 0
+  model_name: R/amazon/nova-2-lite-v1:free
+- model_info:
+    input_cost_1M_token: 0.5
+    max_output_tokens: 262K
+    max_tokens: 262K
+    output_cost_1M_token: 1.5
+    supports_vision: true
+  model_name: R/mistralai/mistral-large-2512
+- model_info:
+    input_cost_1M_token: 0
+    max_output_tokens: 128K
+    max_tokens: 131K
+    output_cost_1M_token: 0
+  model_name: R/arcee-ai/trinity-mini:free
+- model_info:
+    input_cost_1M_token: 0
     max_output_tokens: 30K
     max_tokens: 2000K
     output_cost_1M_token: 0
@@ -1139,3 +1158,45 @@ model_list:
     output_cost_1M_token: 0.0
     supports_vision: true
   model_name: ollama/DeepSeek-OCR
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+    supports_vision: true
+  model_name: ollama/ministral-3:14b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 65K
+    max_tokens: 1050K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+    supports_vision: true
+  model_name: ollama/gemini-3-pro-preview:latest
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 128K
+    max_tokens: 200K
+    output_cost_1M_token: 0.0
+  model_name: ollama/kimi-k2:1t-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/kimi-k2-thinking:cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 160K
+    max_tokens: 160K
+    output_cost_1M_token: 0.0
+    supports_reasoning: true
+  model_name: ollama/cogito-2.1:671b-cloud
+- model_info:
+    input_cost_1M_token: 0.0
+    max_output_tokens: 256K
+    max_tokens: 256K
+    output_cost_1M_token: 0.0
+    supports_vision: true
+  model_name: ollama/mistral-large-3:675b-cloud

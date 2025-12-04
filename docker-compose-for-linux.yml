@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: litellm_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount the config file.
+      # IMPORTANT: Rename your 'litellmconfig_example.yaml' to 'litellmconfig.yaml' on your host machine.
+      - ./litellmconfig.yaml:/app/litellmconfig.yaml
+      
+      # Mount the Claude Code Router config file.
+      # IMPORTANT: Ensure the host path matches your actual Claude Code Router config location.
+      #- C:\Users\gotmo\.claude-code-router\config.json:/app/claude_config.json
+
+      # Mount the processed models file to persist changes.
+      - ./processed_models.yaml:/app/processed_models.yaml
+
+      # Mount the temp_uploads directory to persist uploads.
+      - ./temp_uploads:/app/temp_uploads
+  
+      # Mount the config_paths.py file to ensure correct paths in Docker
+      - ./config_paths.py:/app/config_paths.py
+      
+      # Mount the actual LiteLLM config file from its real location
+      #- D:\Code\LiteLLM_OpenWebUI_Docker\litellmconfig.yaml:/app/real_litellmconfig.yaml
+      
+      # Mount the Docker-specific config paths file
+      - ./config_paths_docker.py:/app/config_paths_docker.py
+    restart: unless-stopped

@@ -181,7 +181,7 @@ mv litellmconfig_example.yaml litellmconfig.yaml
 在项目根目录中执行以下命令以首次构建并运行应用：
 
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 - `--build`：在首次运行或 `Dockerfile` 等源文件发生变化时重建镜像。
@@ -191,13 +191,13 @@ docker-compose up --build -d
 
 对于后续启动，您只需运行：
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 停止应用
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### 数据持久化
